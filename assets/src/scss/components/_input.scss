@@ -1,10 +1,11 @@
 .content-container {
     background: #fff;
     border-radius: 3px;
-    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(220deg, rgba(255, 255, 255, 0.95) 0%, rgb(194, 233, 251) 110%);
+    box-shadow: 0 0 5px 1px #a1c3fe;
+    padding: 30px 50px 50px 50px;
     overflow: hidden;
     margin: 58px 15px;
-    padding: 15px 30px;
 
     input {
     	padding: 8px 10px;
