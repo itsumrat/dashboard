@@ -1,19 +1,80 @@
 .content-container {
     background: #fff;
     border-radius: 3px;
-    background-image: linear-gradient(220deg, rgba(255, 255, 255, 0.95) 0%, rgb(194, 233, 251) 110%);
-    box-shadow: 0 0 5px 1px #a1c3fe;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
     padding: 30px 50px 50px 50px;
     overflow: hidden;
-    margin: 58px 15px;
+    margin: 0 15px;
+
+    label {
+        line-height: 2.5;
+        font-size: 17px;
+    }
 
     input {
     	padding: 8px 10px;
-        border-radius: 4px;
-        border: solid 2px #d2dbe2;
-        height: 50px;
+        border-radius: 0;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        height: 45px;
         box-sizing: border-box;
         width: 100%;
+        outline: none;
+
+        &:hover {
+            border-image-source: linear-gradient(45deg,rgba(102,244,133,1.00) 0%,rgba(23,172,255,1.00) 100%);
+            border-image-slice: 1;
+        }
+    }
+    textarea {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        outline: 0;
+
+        &:hover {
+            border-image-source: linear-gradient(45deg,rgba(102,244,133,1.00) 0%,rgba(23,172,255,1.00) 100%);
+            border-image-slice: 1;
+        }
     }
 }
+
+
+
+
+
+/*Button*/
+
+.gradient-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(45deg,rgba(102,244,133,1.00) 0%,rgba(23,172,255,1.00) 100%);
+    transform: translateY(-50%);
+    border: 0;
+    appearance: none;
+}
+.gradient-btn:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  background: linear-gradient(45deg,rgba(102,244,133,1.00) 0%,rgba(23,172,255,1.00) 100%);
+  content: '';
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+.gradient-btn:hover:after {
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+}
+
 

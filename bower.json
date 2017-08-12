@@ -1,6 +1,6 @@
 {
   "name": "care",
-  "description": "Simple bootstrap landing page.",
+  "description": "Dashboard",
   "version": "",
   "homepage": "fb.com/itsumrat",
   "authors": [
@@ -17,9 +17,8 @@
     "vendor"
   ],
   "dependencies": {
-    "bootstrap"     : "4.0.0-alpha.6",
-    "font-awesome"  : "4.7.0",
-    "include-media" : "1.4.9"
+    "font-awesome": "4.7.0",
+    "select2": "^4.0.3"
   },
   "devDependencies": {}
 }

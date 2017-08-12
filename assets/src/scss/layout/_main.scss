@@ -115,6 +115,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
+	position: relative;
+	z-index: 1;
 }
 .bar-item:hover {
 	background: #44A08D;  /* fallback for old browsers */

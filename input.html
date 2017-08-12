@@ -44,6 +44,7 @@
     <title>Dashboard</title>
     
     <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="assets/dist/css/style.min.css" type="text/css" />
 </head>
 <body>
@@ -90,12 +91,16 @@
 <div class="w3-main" style="margin-left:235px;margin-top:58px;">
     <div class="content-container">
         <form>
-          <label>First Name</label>
-          <input type="text" name="username" placeholder="first name">
-          <label>Second Name</label>
-          <input type="text" name="surname" placeholder="surname">
-          <label>Second Name</label>
-          <input type="password" name="pw" placeholder="Password" />
+            <label>First Name:</label>
+            <input type="text" name="username" placeholder="first name">
+            <label>Second Name:</label>
+            <input type="text" name="surname" placeholder="surname">
+            <label>Second Name:</label>
+            <input type="password" name="pw" placeholder="Password" />
+            <label>Message:</label>
+            <textarea rows="7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+            
+            <button type="button" class="gradient-btn">submit</button>
         </form>
     </div>
   <!-- Footer -->
@@ -130,6 +135,13 @@
     </div>
   </div>
 </div>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/vendor/select2/dist/js/select2.min.js"></script>
 
 <script>
 // Get the Sidebar

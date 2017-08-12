@@ -1,7 +1,8 @@
 @mixin primary-font($size, $line-height: 1.5625) {
+	font-family: 'Open Sans', sans-serif;
 	font-size: $size;
 	line-height: $line-height;
-	}
+}
 
 @mixin heading-font($size: $font-size-base, $line-height: 1.85) {
 	font-family: 'Martel Sans', sans-serif;
