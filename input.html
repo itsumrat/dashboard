@@ -50,18 +50,18 @@
 <body>
 
 <!-- Top container -->
-<div class="bar top-bar">
-  <button class="bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="sidebar_open();"><i class="fa fa-bars"></i>  Menu</button>
-  <span class="bar-item" style="color: #fff;position: relative;z-index: 1;">Palsha Krishnapur High School</span>
+<div class="top-bar">
+  <button style="display: inline-block;background-color: transparent;border: 0;" class="w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="sidebar_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span style="color: #fff;position: relative;z-index: 1;display: inline-block;padding-left: 20px;">Palsha Krishnapur High School</span>
 </div>
 
 <!-- Sidebar/menu -->
 <nav class="sidebar w3-collapse w3-animate-left" id="mySidebar"><br>
   <div class="w3-container w3-row">
-    <div class="w3-col s4">
+    <div class="profile-img-div">
       <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px;position: relative;z-index: 1;">
     </div>
-    <div class="w3-col s8 bar">
+    <div class="profile-menu">
       <span style="color: #fff;position: relative;z-index: 1;">Welcome, <strong>Mike</strong></span><br>
       <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
       <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
@@ -120,8 +120,6 @@
             <input type="radio" id="test3" name="radio-group" checked="">
             <label for="test3">Orange</label>
 
-
-            
             <button type="button" class="gradient-btn">submit</button>
         </form>
     </div>
