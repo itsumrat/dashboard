@@ -11,6 +11,7 @@
     }
 
     input {
+        font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
     	padding: 13px 10px;
         border-radius: 0;
         border: 1px solid rgba(0, 0, 0, 0.15);
@@ -25,6 +26,7 @@
         }
     }
     textarea {
+        font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
         width: 100%;
         border: 1px solid rgba(0, 0, 0, 0.15);
         outline: 0;
@@ -201,3 +203,23 @@
 }
 
 
+/*Ticker*/
+.ticker__viewport {
+  background: #0093d0;
+  color: #fff;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.ticker__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ticker__item {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 40px;
+}
