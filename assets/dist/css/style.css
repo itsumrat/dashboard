@@ -8,8 +8,33 @@ Description:
 Licensed Commercial 
 Copyright 2015-2015 Hussain Sumrat
 */
+/*Ticker*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+.ticker__viewport {
+  position: absolute;
+  display: inline-block; 
+  overflow: hidden;
+  line-height: 2.8;
+  color: #fff;
+}
+
+.ticker__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:         flex; 
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.ticker__item {
+  display: inline-block;
+  padding-right: 40px; 
+  white-space: nowrap;
+}
+
 .content-container, .modal-content-container {
   padding: 30px 50px 50px 50px;
   margin: 0 15px; 
@@ -222,30 +247,6 @@ Copyright 2015-2015 Hussain Sumrat
   right: -4px; 
   bottom: -4px;
   left: -4px;
-}
-
-/*Ticker*/
-.ticker__viewport {
-  padding: 10px 0; 
-  overflow: hidden;
-  color: #fff;
-  background: #0093d0;
-}
-
-.ticker__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display:         flex; 
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.ticker__item {
-  display: inline-block;
-  padding-right: 40px; 
-  white-space: nowrap;
 }
 
 .ems-modal {
