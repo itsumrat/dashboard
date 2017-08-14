@@ -88,17 +88,39 @@
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="sidebar_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:235px;margin-top:58px;">
+<div class="w3-main" style="margin-left:235px;">
     <div class="content-container">
         <form>
-            <label>First Name:</label>
-            <input type="text" name="username" placeholder="first name">
-            <label>Second Name:</label>
-            <input type="text" name="surname" placeholder="surname">
-            <label>Second Name:</label>
+            <label>Full Name:</label>
+            <input type="text" name="username" placeholder="Full name">
+            <label>Password:</label>
             <input type="password" name="pw" placeholder="Password" />
             <label>Message:</label>
             <textarea rows="7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+            <!-- Checkbox -->
+            <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+            <label for="styled-checkbox-1">CSS Only</label>
+
+            <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2" checked>
+            <label for="styled-checkbox-2">Check box</label>
+
+            <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3" disabled>
+            <label for="styled-checkbox-3">Disabled checkbox</label>
+
+            <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
+            <label for="styled-checkbox-4">Fourth option</label> 
+
+            <!-- Radio button -->
+            <input type="radio" id="test1" name="radio-group" checked>
+            <label for="test1">CSS Only</label>
+
+            <input type="radio" id="test2" name="radio-group">
+            <label for="test2">Radio Button</label>
+
+            <input type="radio" id="test3" name="radio-group" checked="">
+            <label for="test3">Orange</label>
+
+
             
             <button type="button" class="gradient-btn">submit</button>
         </form>
@@ -112,26 +134,23 @@
   <!-- End page content -->
 </div>
 
-<!-- Modal that pops up when you click on "New Message" -->
-<div id="id01" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
-       <span onclick="document.getElementById('id01').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
-      <h2>Send Mail</h2>
+<!-- Modal -->
+<div id="id01" class="ems-modal" style="z-index:4">
+  <div class="ems-modal-content w3-animate-zoom">
+    <div class="modal-title-container">
+        <h2 class="modal-title">Send Mail</h2>
+        <a href="#" class="remove-modal" onclick="document.getElementById('id01').style.display='none'"></a>
     </div>
-    <div class="w3-panel">
-      <label>To</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>From</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>Subject</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="What's on your mind?">
-      <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Send  <i class="fa fa-paper-plane"></i></a> 
-      </div>    
+    <div class="modal-content-container">
+        <form>
+            <label>Full Name:</label>
+            <input type="text" name="username" placeholder="Full name">
+            <label>Password:</label>
+            <input type="password" name="pw" placeholder="Password" />
+            <label>Message:</label>
+            <textarea rows="7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+            <button class="gradient-border-btn">Send  <i class="fa fa-paper-plane"></i></button>
+        </form>
     </div>
   </div>
 </div>
@@ -144,28 +163,28 @@
 <script type="text/javascript" src="assets/vendor/select2/dist/js/select2.min.js"></script>
 
 <script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
 
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
 
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function sidebar_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-        overlayBg.style.display = "none";
-    } else {
-        mySidebar.style.display = 'block';
-        overlayBg.style.display = "block";
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function sidebar_open() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+            overlayBg.style.display = "none";
+        } else {
+            mySidebar.style.display = 'block';
+            overlayBg.style.display = "block";
+        }
     }
-}
 
-// Close the sidebar with the close button
-function sidebar_close() {
-    mySidebar.style.display = "none";
-    overlayBg.style.display = "none";
-}
+    // Close the sidebar with the close button
+    function sidebar_close() {
+        mySidebar.style.display = "none";
+        overlayBg.style.display = "none";
+    }
 </script>
 
 </body>

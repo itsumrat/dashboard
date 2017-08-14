@@ -7,18 +7,17 @@
     margin: 0 15px;
 
     label {
-        line-height: 2.5;
         font-size: 17px;
     }
 
     input {
-    	padding: 8px 10px;
+    	padding: 10px;
         border-radius: 0;
         border: 1px solid rgba(0, 0, 0, 0.15);
-        height: 45px;
         box-sizing: border-box;
         width: 100%;
         outline: none;
+        margin-bottom: 10px;
 
         &:hover {
             border-image-source: linear-gradient(45deg,rgba(102,244,133,1.00) 0%,rgba(23,172,255,1.00) 100%);
@@ -29,6 +28,8 @@
         width: 100%;
         border: 1px solid rgba(0, 0, 0, 0.15);
         outline: 0;
+        padding: 8px 10px;
+        margin-bottom: 10px;
 
         &:hover {
             border-image-source: linear-gradient(45deg,rgba(102,244,133,1.00) 0%,rgba(23,172,255,1.00) 100%);
@@ -37,13 +38,130 @@
     }
 }
 
+.styled-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
 
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
 
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.15);
+  }
 
+  // Box hover
+  &:hover + label:before {
+    background: linear-gradient(45deg,rgba(102,244,133,1.00) 0%,rgba(23,172,255,1.00) 100%);
+  }
+  
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: linear-gradient(45deg,rgba(102,244,133,1.00) 0%,rgba(23,172,255,1.00) 100%);
+  }
+  
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+
+/*Radio button*/
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(45deg,rgba(102,244,133,1.00) 0%,rgba(23,172,255,1.00) 100%);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
 
 /*Button*/
 
 .gradient-btn {
+    display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.2;
@@ -57,6 +175,11 @@
     transform: translateY(-50%);
     border: 0;
     appearance: none;
+    margin-top: 50px;
+
+    &:focus {
+        outline: 0;
+    }
 }
 .gradient-btn:after {
   position: absolute;
